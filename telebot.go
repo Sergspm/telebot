@@ -6,7 +6,7 @@
 //
 //	import (
 //		"time"
-//		tele "gopkg.in/telebot.v3"
+//		tele "gopkg.in/Sergspm/telebot.v4"
 //	)
 //
 //	func main() {

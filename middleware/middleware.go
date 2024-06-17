@@ -3,7 +3,7 @@ package middleware
 import (
 	"errors"
 
-	tele "gopkg.in/telebot.v3"
+	tele "gopkg.in/Sergspm/telebot.v4"
 )
 
 // AutoRespond returns a middleware that automatically responds
