@@ -75,6 +75,8 @@ type Bot struct {
 	Poller  Poller
 	onError func(error, Context)
 
+	OnUpdate func(Update, Context)
+
 	group       *Group
 	handlers    map[string]HandlerFunc
 	synchronous bool
