@@ -75,7 +75,8 @@ type Bot struct {
 	Poller  Poller
 	onError func(error, Context)
 
-	OnUpdate func(Update, Context)
+	OnUpdate     func(Update, Context)
+	OnRawUpdates func(data []byte)
 
 	group       *Group
 	handlers    map[string]HandlerFunc
