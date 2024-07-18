@@ -31,7 +31,9 @@ type Update struct {
 func (b *Bot) ProcessUpdate(u Update) {
 	c := b.NewContext(u)
 
-	b.OnUpdate(u, c)
+	if b.OnUpdate != nil {
+		b.OnUpdate(u, c)
+	}
 
 	if u.Message != nil {
 		m := u.Message

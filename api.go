@@ -245,7 +245,9 @@ func (b *Bot) getUpdates(offset, limit int, timeout time.Duration, allowed []str
 		return nil, err
 	}
 
-	b.OnRawUpdates(data)
+	if b.OnRawUpdates != nil {
+		b.OnRawUpdates(data)
+	}
 
 	var resp struct {
 		Result []Update
