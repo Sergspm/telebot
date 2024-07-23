@@ -77,6 +77,7 @@ type Bot struct {
 
 	OnUpdate     func(Update, Context)
 	OnRawUpdates func(data []byte)
+	OnRawData    func(method string, payload interface{}, data []byte)
 
 	group       *Group
 	handlers    map[string]HandlerFunc

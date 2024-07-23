@@ -67,6 +67,10 @@ func (b *Bot) Raw(method string, payload interface{}) ([]byte, error) {
 		verbose(method, payload, data)
 	}
 
+	if b.OnRawData != nil {
+		b.OnRawData(method, payload, data)
+	}
+
 	// returning data as well
 	return data, extractOk(data)
 }
